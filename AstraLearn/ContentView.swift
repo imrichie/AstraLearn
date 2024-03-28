@@ -35,16 +35,16 @@ struct ContentView: View {
                 .ignoresSafeArea()
             
             // Main Content Layer
-            VStack {
-                Text("Welcome to Astra Learn")
-                    .font(.largeTitle)
-                    .fontWeight(.thin)
-                    .foregroundStyle(.white)
+            VStack(spacing: 24) {
+                Image("Logo")
+                    .frame(width: 200, height: 200)
+                    .aspectRatio(contentMode: .fit)
+                    .padding(.bottom, 36)
                 
                 Button(action: {
                     showAlert1 = true
                 }, label: {
-                    Text("Planets Quiz")
+                    Text("Planets")
                         .font(.headline)
                         .foregroundStyle(.white)
                         .padding()
@@ -54,7 +54,6 @@ struct ContentView: View {
                         .overlay(RoundedRectangle(cornerRadius: 25).stroke(Color.white, lineWidth: 2))
                         .shadow(color: .gray, radius: 5, x: 0, y: 5)
                 })
-                .padding(.bottom)
                 .alert("Planet Quiz", isPresented: $showAlert1) {
                     Button("Dismiss", role: .none) {}
                 } message: {
@@ -64,7 +63,7 @@ struct ContentView: View {
                 Button(action: {
                     showAlert2 = true
                 }, label: {
-                    Text("Space Mission Quiz")
+                    Text("Space Missions")
                         .font(.headline)
                         .foregroundStyle(.white)
                         .padding()
@@ -74,13 +73,13 @@ struct ContentView: View {
                         .overlay(RoundedRectangle(cornerRadius: 25).stroke(Color.white, lineWidth: 2))
                         .shadow(color: .gray, radius: 5, x: 0, y: 5)
                 })
-                .padding()
                 .alert("Space Mission Quiz", isPresented: $showAlert2) {
                     Button("Dismiss", role: .none) {}
                 } message: {
                     Text("Quiz for Space Missions")
                 }
             }
+            .padding()
         }
     }
 }
