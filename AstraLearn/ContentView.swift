@@ -42,6 +42,7 @@ struct ContentView: View {
                     .padding(.bottom, 36)
                 
                 Button(action: {
+                    selectedCategory = "Planets"
                     showAlert1 = true
                 }, label: {
                     Text("Planets")
@@ -57,10 +58,15 @@ struct ContentView: View {
                 .alert("Planet Quiz", isPresented: $showAlert1) {
                     Button("Dismiss", role: .none) {}
                 } message: {
-                    Text("Quiz for the Planets")
+                    if let selectedCategory = selectedCategory {
+                        Text("You selected to view \(selectedCategory)")
+                    } else {
+                        Text("Opened Planets")
+                    }
                 }
                 
                 Button(action: {
+                    selectedCategory = "Space Missions"
                     showAlert2 = true
                 }, label: {
                     Text("Space Missions")
@@ -76,7 +82,11 @@ struct ContentView: View {
                 .alert("Space Mission Quiz", isPresented: $showAlert2) {
                     Button("Dismiss", role: .none) {}
                 } message: {
-                    Text("Quiz for Space Missions")
+                    if let selectedCategory = selectedCategory {
+                        Text("You selected to view \(selectedCategory)")
+                    } else {
+                        Text("Opened Space Missions")
+                    }
                 }
             }
             .padding()
