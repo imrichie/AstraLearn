@@ -8,15 +8,13 @@
 import SwiftUI
 
 struct PlanetCardView: View {
-    var planetName: String
-    var planetDescription: String
-    var planetImage: String
-    var orbitNumber: Int
+    // accept a planet enum case
+    let planet: Planet
     
     var body: some View {
         HStack {
             // Planet Image
-            Image(planetImage)
+            Image(planet.details.imageName)
                 .resizable()
                 .frame(width: 84, height: 84)
                 .clipShape(Circle())
@@ -25,9 +23,9 @@ struct PlanetCardView: View {
             
             // Planet Name and Description
             VStack(alignment: .leading, spacing: 4) {
-                Text(planetName)
+                Text(planet.details.name)
                     .font(.headline)
-                Text(planetDescription)
+                Text(planet.details.notableFact)
                     .font(.caption)
                     .foregroundStyle(.secondary)
             }
@@ -35,7 +33,7 @@ struct PlanetCardView: View {
             Spacer()
             
             // Orbit Number
-            Text("\(orbitNumber)")
+            Text("\(planet.details.orbitNumber)")
                 .font(.system(size: 64))
                 .fontWeight(.bold)
                 .padding(.trailing, 16)
@@ -50,5 +48,5 @@ struct PlanetCardView: View {
 }
 
 #Preview {
-    PlanetCardView(planetName: "Earth", planetDescription: "3rd Rock from Sun", planetImage: "Earth", orbitNumber: 3)
+    PlanetCardView(planet: .earth)
 }
