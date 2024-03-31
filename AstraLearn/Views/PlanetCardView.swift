@@ -18,8 +18,9 @@ struct PlanetCardView: View {
             // Planet Image
             Image(planetImage)
                 .resizable()
-                .frame(width: 75, height: 75)
+                .frame(width: 84, height: 84)
                 .clipShape(Circle())
+                .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
                 .padding(.leading, 16)
             
             // Planet Name and Description
