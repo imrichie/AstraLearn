@@ -11,6 +11,8 @@
 		1365E9ED2BB4F2950079BF92 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1365E9EC2BB4F2950079BF92 /* ContentView.swift */; };
 		1365E9EF2BB4F2960079BF92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1365E9EE2BB4F2960079BF92 /* Assets.xcassets */; };
 		1365E9F22BB4F2960079BF92 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1365E9F12BB4F2960079BF92 /* Preview Assets.xcassets */; };
+		136B27A82BB653D800A389BB /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136B27A72BB653D800A389BB /* Planet.swift */; };
+		13F85EC22BB62A49002D29D5 /* PlanetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F85EC12BB62A49002D29D5 /* PlanetsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		1365E9EC2BB4F2950079BF92 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1365E9EE2BB4F2960079BF92 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1365E9F12BB4F2960079BF92 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		136B27A72BB653D800A389BB /* Planet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planet.swift; sourceTree = "<group>"; };
+		13F85EC12BB62A49002D29D5 /* PlanetsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,9 +56,10 @@
 			isa = PBXGroup;
 			children = (
 				1365E9EA2BB4F2950079BF92 /* AstraLearnApp.swift */,
-				1365E9EC2BB4F2950079BF92 /* ContentView.swift */,
-				1365E9EE2BB4F2960079BF92 /* Assets.xcassets */,
+				136B27A62BB650F500A389BB /* Views */,
+				136B27A92BB653DE00A389BB /* Model */,
 				1365E9F02BB4F2960079BF92 /* Preview Content */,
+				1365E9EE2BB4F2960079BF92 /* Assets.xcassets */,
 			);
 			path = AstraLearn;
 			sourceTree = "<group>";
@@ -65,6 +70,23 @@
 				1365E9F12BB4F2960079BF92 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		136B27A62BB650F500A389BB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1365E9EC2BB4F2950079BF92 /* ContentView.swift */,
+				13F85EC12BB62A49002D29D5 /* PlanetsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		136B27A92BB653DE00A389BB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				136B27A72BB653D800A389BB /* Planet.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +159,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13F85EC22BB62A49002D29D5 /* PlanetsView.swift in Sources */,
 				1365E9ED2BB4F2950079BF92 /* ContentView.swift in Sources */,
 				1365E9EB2BB4F2950079BF92 /* AstraLearnApp.swift in Sources */,
+				136B27A82BB653D800A389BB /* Planet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
