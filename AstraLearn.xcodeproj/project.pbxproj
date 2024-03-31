@@ -12,6 +12,7 @@
 		1365E9EF2BB4F2960079BF92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1365E9EE2BB4F2960079BF92 /* Assets.xcassets */; };
 		1365E9F22BB4F2960079BF92 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1365E9F12BB4F2960079BF92 /* Preview Assets.xcassets */; };
 		136B27A82BB653D800A389BB /* Planet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136B27A72BB653D800A389BB /* Planet.swift */; };
+		136B27AB2BB92F0600A389BB /* PlanetCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136B27AA2BB92F0600A389BB /* PlanetCardView.swift */; };
 		13F85EC22BB62A49002D29D5 /* PlanetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F85EC12BB62A49002D29D5 /* PlanetsView.swift */; };
 /* End PBXBuildFile section */
 
@@ -22,6 +23,7 @@
 		1365E9EE2BB4F2960079BF92 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1365E9F12BB4F2960079BF92 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		136B27A72BB653D800A389BB /* Planet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planet.swift; sourceTree = "<group>"; };
+		136B27AA2BB92F0600A389BB /* PlanetCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetCardView.swift; sourceTree = "<group>"; };
 		13F85EC12BB62A49002D29D5 /* PlanetsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,6 +79,7 @@
 			children = (
 				1365E9EC2BB4F2950079BF92 /* ContentView.swift */,
 				13F85EC12BB62A49002D29D5 /* PlanetsView.swift */,
+				136B27AA2BB92F0600A389BB /* PlanetCardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -162,6 +165,7 @@
 				13F85EC22BB62A49002D29D5 /* PlanetsView.swift in Sources */,
 				1365E9ED2BB4F2950079BF92 /* ContentView.swift in Sources */,
 				1365E9EB2BB4F2950079BF92 /* AstraLearnApp.swift in Sources */,
+				136B27AB2BB92F0600A389BB /* PlanetCardView.swift in Sources */,
 				136B27A82BB653D800A389BB /* Planet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
