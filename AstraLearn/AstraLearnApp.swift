@@ -9,6 +9,7 @@ import SwiftUI
 
 @main
 struct AstraLearnApp: App {
+    
     var body: some Scene {
         WindowGroup {
             ContentView()

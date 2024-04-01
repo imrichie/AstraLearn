@@ -25,11 +25,17 @@ struct ContentView: View {
         LinearGradient(gradient: gradient, startPoint: .topLeading, endPoint: .bottomTrailing)
     }
     
+    let spaceBackground = LinearGradient(
+        gradient: Gradient(colors: [Color.black, Color.blue.opacity(0.4), Color.purple.opacity(0.6)]),
+        startPoint: .topLeading,
+        endPoint: .bottomTrailing
+    )
+    
     var body: some View {
         NavigationStack {
             ZStack {
                 // Background
-                spaceGradient
+                spaceBackground
                     .ignoresSafeArea()
                 
                 // Main Content Layer
@@ -49,8 +55,7 @@ struct ContentView: View {
                                 .padding()
                                 .frame(width: 200, height: 50)
                                 .background(Color.blue)
-                                .clipShape(RoundedRectangle(cornerRadius: 25))
-                                .overlay(RoundedRectangle(cornerRadius: 25).stroke(Color.white, lineWidth: 2))
+                                .clipShape(RoundedRectangle(cornerRadius: 16))
                                 .shadow(color: .gray, radius: 5, x: 0, y: 5)
                         }
                     }
@@ -65,8 +70,7 @@ struct ContentView: View {
                                 .padding()
                                 .frame(width: 200, height: 50)
                                 .background(Color.purple)
-                                .clipShape(RoundedRectangle(cornerRadius: 25))
-                                .overlay(RoundedRectangle(cornerRadius: 25).stroke(Color.white, lineWidth: 2))
+                                .clipShape(RoundedRectangle(cornerRadius: 16))
                                 .shadow(color: .gray, radius: 5, x: 0, y: 5)
                         }
                     }

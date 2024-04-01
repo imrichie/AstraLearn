@@ -39,16 +39,16 @@ enum Planet {
             
         case .jupiter:
             
-            return PlanetDetails(name: "Jupiter", imageName: "jupiter", notableFact: "Jupiter has the shortest day of all the planets", numberOfMoons: 79, orbitPeriod: 4333, diameter: 139820, orbitNumber: 5)
+            return PlanetDetails(name: "Jupiter", imageName: "Jupiter", notableFact: "Jupiter has the shortest day of all the planets", numberOfMoons: 79, orbitPeriod: 4333, diameter: 139820, orbitNumber: 5)
         case .saturn:
             
-            return PlanetDetails(name: "Saturn", imageName: "saturn", notableFact: "Saturn has the most extensive rings of any planet", numberOfMoons: 82, orbitPeriod: 10759, diameter: 116460, orbitNumber: 6)
+            return PlanetDetails(name: "Saturn", imageName: "Saturn", notableFact: "Saturn has the most extensive rings of any planet", numberOfMoons: 82, orbitPeriod: 10759, diameter: 116460, orbitNumber: 6)
         case .uranus:
             
-            return PlanetDetails(name: "Uranus", imageName: "uranus", notableFact: "Uranus makes one trip around the Sun every 84 Earth years", numberOfMoons: 27, orbitPeriod: 30687, diameter: 50724, orbitNumber: 7)
+            return PlanetDetails(name: "Uranus", imageName: "Uranus", notableFact: "Uranus makes one trip around the Sun every 84 Earth years", numberOfMoons: 27, orbitPeriod: 30687, diameter: 50724, orbitNumber: 7)
         case .neptune:
             
-            return PlanetDetails(name: "Neptune", imageName: "neptune", notableFact: "Neptune was the first planet located through mathematical calculations", numberOfMoons: 14, orbitPeriod: 60190, diameter: 49244, orbitNumber: 8)
+            return PlanetDetails(name: "Neptune", imageName: "Neptune", notableFact: "Neptune was the first planet located through mathematical calculations", numberOfMoons: 14, orbitPeriod: 60190, diameter: 49244, orbitNumber: 8)
             
         case .pluto:
             return PlanetDetails(name: "Pluto", imageName: "Pluto", notableFact: "Pluto was reclassified from a planet to a dwarf planet in 2006", numberOfMoons: 5, orbitPeriod: 90560, diameter: 2377, orbitNumber: 9)

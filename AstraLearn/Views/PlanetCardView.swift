@@ -16,7 +16,7 @@ struct PlanetCardView: View {
             // Planet Image
             Image(planet.details.imageName)
                 .resizable()
-                .frame(width: 84, height: 84)
+                .frame(width: 100, height: 100)
                 .clipShape(Circle())
                 .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
                 .padding(.leading, 16)
@@ -39,11 +39,11 @@ struct PlanetCardView: View {
                 .padding(.trailing, 16)
             
         }
-        .frame(width: 350, height: 100, alignment: .center)
-        .background(Color(UIColor.secondarySystemBackground))
+        .frame(width: 350, height: 116, alignment: .center)
+        .background(.ultraThinMaterial)
         .clipShape(RoundedRectangle(cornerRadius: 16))
-        .shadow(radius: 8)
-        .padding(.horizontal, 16)
+        .shadow(color: .gray.opacity(0.5), radius: 5, x: 0, y: 2)
+        .padding(.horizontal)
     }
 }
 
