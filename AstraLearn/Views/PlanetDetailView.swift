@@ -37,23 +37,27 @@ struct PlanetDetailView: View {
                 // metric cards
                 VStack(spacing: 16) {
                     HStack(spacing: 16) {
-                        MetricCard(title: "Moons", 
-                                   metric: selectedPlanet.details.numberOfMoons,
+                        // Moon Card
+                        MetricCardView(title: "Number of Moons",
+                                   metric: "\(selectedPlanet.details.numberOfMoons)",
                                    description: "Orbiting")
                         
-                        MetricCard(title: "Orbit Period",
-                                   metric: selectedPlanet.details.formattedOrbitPeriod.value,
+                        // Orbit Period Card
+                        MetricCardView(title: "Orbit Period",
+                                   metric: "\(selectedPlanet.details.formattedOrbitPeriod.value)",
                                    description: selectedPlanet.details.formattedOrbitPeriod.unit)
                     }
                     
                     HStack(spacing: 16) {
-                        MetricCard(title: "Diameter", 
-                                   metric: selectedPlanet.details.diameter,
-                                   description: selectedPlanet.details.formattedDiameter.unit)
+                        // Diameter Card
+                        MetricCardView(title: "Diameter",
+                                   metric: selectedPlanet.details.formattedDiameter,
+                                   description: "Kilometers")
                         
-                        MetricCard(title: "Surface Temperature",
-                                   metric: selectedPlanet.details.surfaceTemperate,
-                                   description: "Average Temp")
+                        // Surface Temperature Card
+                        MetricCardView(title: "Surface Temperature",
+                                   metric: selectedPlanet.details.formattedTemperature,
+                                   description: "Average")
                     }
                 }
             }

@@ -19,12 +19,6 @@ struct PlanetDetails: Identifiable {
     let orbitNumber: Int // in kilometers
     let surfaceTemperate: Int // average, in Celcius
     
-    // descriptions for the metric cards
-    let moonDescriptions: String = "Moons orbiting"
-    let orbitDescription: String = "Orbit period in Earth Days"
-    let diameterDescription: String = "Diamter in Kilometers"
-    let temperatureDescription: String = "Average surface temp in °C"
-    
     // Return both the period and the unit as a tuple
     var formattedOrbitPeriod: (value: Int, unit: String) {
         if orbitPeriod <= 365 {
@@ -36,21 +30,28 @@ struct PlanetDetails: Identifiable {
         }
     }
     
-    // Computed property for diameter with "K" or "M"
-    var formattedDiameter: (value: String, unit: String) {
-        if diameter < 1_000 {
-            // For diameters less than a thousand kilometers, just show the number
-            return ("\(diameter)", "kilometers")
-        } else if diameter < 1_000_000 {
-            // Convert to thousands for readability and append "K"
-            let thousands = Double(diameter) / 1_000.0
-            return (String(format: "%.1fK", thousands), "kilometers")
+    // Format the diameter and handle decimal point
+    var formattedDiameter: String {
+        let diameterInThousands = Double(diameter) / 1_000.0
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        formatter.minimumFractionDigits = 0 // No decimals
+        formatter.maximumFractionDigits = 1 // Allow up to three digits after the decimal point, adjust as needed
+        
+        // This ensures that for Earth, "12742" becomes "12.742", and then "12,742" after formatting.
+        if let formattedNumber = formatter.string(from: NSNumber(value: diameterInThousands)) {
+            // Append "K" without space to indicate thousands.
+            return "\(formattedNumber)k"
         } else {
-            // Convert to millions for readability and append "M"
-            let millions = Double(diameter) / 1_000_000.0
-            return (String(format: "%.1fM", millions), "kilometers")
+            // Fallback to the original diameter in kilometers if formatting fails.
+            return "\(diameter) km"
         }
     }
+    
+    // format surface temperature
+        var formattedTemperature: String {
+            return "\(surfaceTemperate)°c"
+        }
 }
 
 
@@ -61,31 +62,31 @@ enum Planet {
         switch self {
         case .mercury:
             return PlanetDetails(name: "Mercury", imageName: "Mercury", description: "Mercury has no atmosphere, which means there is no weather", 
-                                 numberOfMoons: 0, orbitPeriod: 88, diameter: 4880, orbitNumber: 1, surfaceTemperate: -65)
+                                 numberOfMoons: 0, orbitPeriod: 88, diameter: 4878, orbitNumber: 1, surfaceTemperate: 167)
         case .venus:
             return PlanetDetails(name: "Venus", imageName: "Venus", description: "Venus is the hottest planet in our solar system", 
                                  numberOfMoons: 0, orbitPeriod: 225, diameter: 12104, orbitNumber: 2, surfaceTemperate: 465)
         case .earth:
             return PlanetDetails(name: "Earth", imageName: "Earth", description: "Earth is the only planet not named after a god", 
-                                 numberOfMoons: 1, orbitPeriod: 365, diameter: 12742, orbitNumber: 3, surfaceTemperate: 14)
+                                 numberOfMoons: 1, orbitPeriod: 365, diameter: 12742, orbitNumber: 3, surfaceTemperate: 15)
         case .mars:
             return PlanetDetails(name: "Mars", imageName: "Mars", description: "Mars is home to the tallest mountain in the solar system", 
-                                 numberOfMoons: 2, orbitPeriod: 687, diameter: 6779, orbitNumber: 4, surfaceTemperate: -55)
+                                 numberOfMoons: 2, orbitPeriod: 687, diameter: 6794, orbitNumber: 4, surfaceTemperate: -65)
         case .jupiter:
             return PlanetDetails(name: "Jupiter", imageName: "Jupiter", description: "Jupiter has the shortest day of all the planets", 
-                                 numberOfMoons: 79, orbitPeriod: 4333, diameter: 139820, orbitNumber: 5, surfaceTemperate: -145)
+                                 numberOfMoons: 79, orbitPeriod: 4333, diameter: 142796, orbitNumber: 5, surfaceTemperate: -110)
         case .saturn:
             return PlanetDetails(name: "Saturn", imageName: "Saturn", description: "Saturn has the most extensive rings of any planet", 
-                                numberOfMoons: 82, orbitPeriod: 10759, diameter: 116460, orbitNumber: 6, surfaceTemperate: -178)
+                                numberOfMoons: 82, orbitPeriod: 10759, diameter: 120660, orbitNumber: 6, surfaceTemperate: -140)
         case .uranus:
             return PlanetDetails(name: "Uranus", imageName: "Uranus", description: "Uranus makes one trip around the Sun every 84 Earth years", 
-                                 numberOfMoons: 27, orbitPeriod: 30687, diameter: 50724, orbitNumber: 7, surfaceTemperate: -195)
+                                 numberOfMoons: 27, orbitPeriod: 30687, diameter: 51118, orbitNumber: 7, surfaceTemperate: -195)
         case .neptune:
             return PlanetDetails(name: "Neptune", imageName: "Neptune", description: "Neptune was the first planet located through mathematical calculations", 
-                                 numberOfMoons: 14, orbitPeriod: 60190, diameter: 49244, orbitNumber: 8, surfaceTemperate: -200)
+                                 numberOfMoons: 14, orbitPeriod: 60190, diameter: 49523, orbitNumber: 8, surfaceTemperate: -200)
         case .pluto:
             return PlanetDetails(name: "Pluto", imageName: "Pluto", description: "Pluto was reclassified from a planet to a dwarf planet in 2006", 
-                                 numberOfMoons: 5, orbitPeriod: 90560, diameter: 2377, orbitNumber: 9, surfaceTemperate: -225)
+                                 numberOfMoons: 5, orbitPeriod: 90560, diameter: 2300, orbitNumber: 9, surfaceTemperate: -225)
         }
     }
 }

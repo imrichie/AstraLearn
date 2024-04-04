@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct MetricCard: View {
+struct MetricCardView: View {
     let title: String
-    let metric: Int
+    let metric: String
     let description: String
     
     var body: some View {
@@ -20,8 +20,8 @@ struct MetricCard: View {
                 .multilineTextAlignment(.leading)
             
             HStack {
-                Text("\(metric)")
-                    .font(.system(size: 44, weight: .bold))
+                Text(metric)
+                    .font(.system(size: metric.count > 4 ? 42 : 44, weight: .bold))
                     .foregroundStyle(.white)
             }
             
@@ -30,7 +30,7 @@ struct MetricCard: View {
                 .foregroundStyle(.gray)
         }
         .padding()
-        .frame(width: 175, height: 120, alignment: .center)
+        .frame(width: 175, height: 120, alignment: .leading)
         .background(CardBackground())
         .clipShape(RoundedRectangle(cornerRadius: 12))
         .shadow(radius: 10)
@@ -44,5 +44,5 @@ struct CardBackground: View {
 }
 
 #Preview {
-    MetricCard(title: "Moons", metric: 1, description: "Our only Moon")
+    MetricCardView(title: "Moons", metric: "2", description: "Our only Moon")
 }
