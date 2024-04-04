@@ -19,9 +19,11 @@ struct MetricCard: View {
                 .foregroundStyle(.gray)
                 .multilineTextAlignment(.leading)
             
-            Text("\(metric)")
-                .font(.system(size: 44, weight: .bold))
-                .foregroundStyle(.white)
+            HStack {
+                Text("\(metric)")
+                    .font(.system(size: 44, weight: .bold))
+                    .foregroundStyle(.white)
+            }
             
             Text(description)
                 .font(.caption)

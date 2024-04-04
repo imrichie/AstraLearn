@@ -24,6 +24,33 @@ struct PlanetDetails: Identifiable {
     let orbitDescription: String = "Orbit period in Earth Days"
     let diameterDescription: String = "Diamter in Kilometers"
     let temperatureDescription: String = "Average surface temp in °C"
+    
+    // Return both the period and the unit as a tuple
+    var formattedOrbitPeriod: (value: Int, unit: String) {
+        if orbitPeriod <= 365 {
+            return (orbitPeriod, "Earth Days")
+        } else {
+            // Convert to years for anything over 365 days
+            let years = orbitPeriod / 365
+            return (years, "Earth Years")
+        }
+    }
+    
+    // Computed property for diameter with "K" or "M"
+    var formattedDiameter: (value: String, unit: String) {
+        if diameter < 1_000 {
+            // For diameters less than a thousand kilometers, just show the number
+            return ("\(diameter)", "kilometers")
+        } else if diameter < 1_000_000 {
+            // Convert to thousands for readability and append "K"
+            let thousands = Double(diameter) / 1_000.0
+            return (String(format: "%.1fK", thousands), "kilometers")
+        } else {
+            // Convert to millions for readability and append "M"
+            let millions = Double(diameter) / 1_000_000.0
+            return (String(format: "%.1fM", millions), "kilometers")
+        }
+    }
 }
 
 
