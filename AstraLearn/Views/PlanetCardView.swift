@@ -25,7 +25,7 @@ struct PlanetCardView: View {
             VStack(alignment: .leading, spacing: 4) {
                 Text(planet.details.name)
                     .font(.headline)
-                Text(planet.details.notableFact)
+                Text(planet.details.description)
                     .font(.caption)
                     .foregroundStyle(.secondary)
             }

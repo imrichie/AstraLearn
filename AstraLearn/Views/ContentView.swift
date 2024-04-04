@@ -26,7 +26,7 @@ struct ContentView: View {
     }
     
     let spaceBackground = LinearGradient(
-        gradient: Gradient(colors: [Color.black, Color.blue.opacity(0.4), Color.purple.opacity(0.6)]),
+        gradient: Gradient(colors: [Color.black.opacity(0.8), Color.blue.opacity(0.4), Color.purple.opacity(0.6)]),
         startPoint: .topLeading,
         endPoint: .bottomTrailing
     )
