@@ -12,7 +12,7 @@ struct PlanetListView: View {
     private let planets: [Planet] = [.mercury, .venus, .earth, .mars, .jupiter, .saturn, .uranus, .neptune, .pluto]
     
     let spaceBackground = LinearGradient(
-        gradient: Gradient(colors: [Color.blue.opacity(0.4), Color.purple.opacity(0.6), Color.black.opacity(0.5)]),
+        gradient: Gradient(colors: [Color.blue.opacity(0.4), Color.purple.opacity(0.5), Color.black.opacity(0.7)]),
         startPoint: .topLeading,
         endPoint: .bottomTrailing
     )

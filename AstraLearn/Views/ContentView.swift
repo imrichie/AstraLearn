@@ -63,7 +63,7 @@ struct ContentView: View {
                     Button {
                         selectedCategory = "Space Missions"
                     } label: {
-                        NavigationLink(destination: PlanetListView()) {
+                        NavigationLink(destination: SpaceMissionListView()) {
                             Text("Space Missions")
                                 .font(.headline)
                                 .foregroundStyle(.white)
