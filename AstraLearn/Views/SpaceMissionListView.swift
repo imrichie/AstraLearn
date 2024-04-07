@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct SpaceMissionListView: View {
+    let planets: [SpaceMission] = spaceMissions
+    
     var body: some View {
         ZStack {
             // background
@@ -16,6 +18,16 @@ struct SpaceMissionListView: View {
             
             VStack {
                 Image("Apollo-10")
+                    .resizable()
+                    .scaledToFit()
+                    .shadow(color: .white, radius: 10)
+                
+                Image("Apollo-11")
+                    .resizable()
+                    .scaledToFit()
+                    .shadow(color: .white, radius: 10)
+                
+                Image("Apollo-13")
                     .resizable()
                     .scaledToFit()
                     .shadow(color: .white, radius: 10)
