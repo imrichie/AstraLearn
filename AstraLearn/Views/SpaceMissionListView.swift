@@ -13,22 +13,16 @@ struct SpaceMissionListView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                // background
-                Color.gray
-                    .ignoresSafeArea()
+              // background layer
                 
                 ScrollView {
                     VStack(spacing: 16) {
                         ForEach(missions) { mission in
-                            Image(mission.imageName)
-                                .resizable()
-                                .scaledToFit()
-                                .shadow(color: .yellow, radius: 10, x: 0, y: 0)
-                                .padding(.bottom, 16)
+                            SpaceMissionCardView(mission: mission)
                         }
                     }
                 }
-                .navigationTitle("Galactic Gallery")
+                .navigationTitle("Space Missions")
                 .navigationBarTitleDisplayMode(.large)
             }
         }
