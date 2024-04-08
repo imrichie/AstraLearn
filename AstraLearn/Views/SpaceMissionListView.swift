@@ -8,31 +8,29 @@
 import SwiftUI
 
 struct SpaceMissionListView: View {
-    let planets: [SpaceMission] = spaceMissions
+    let missions: [SpaceMission] = spaceMissions
     
     var body: some View {
-        ZStack {
-            // background
-            Color.black
-                .ignoresSafeArea()
-            
-            VStack {
-                Image("Apollo-10")
-                    .resizable()
-                    .scaledToFit()
-                    .shadow(color: .white, radius: 10)
+        NavigationStack {
+            ZStack {
+                // background
+                Color.gray
+                    .ignoresSafeArea()
                 
-                Image("Apollo-11")
-                    .resizable()
-                    .scaledToFit()
-                    .shadow(color: .white, radius: 10)
-                
-                Image("Apollo-13")
-                    .resizable()
-                    .scaledToFit()
-                    .shadow(color: .white, radius: 10)
+                ScrollView {
+                    VStack(spacing: 16) {
+                        ForEach(missions) { mission in
+                            Image(mission.imageName)
+                                .resizable()
+                                .scaledToFit()
+                                .shadow(color: .yellow, radius: 10, x: 0, y: 0)
+                                .padding(.bottom, 16)
+                        }
+                    }
+                }
+                .navigationTitle("Galactic Gallery")
+                .navigationBarTitleDisplayMode(.large)
             }
-            .padding()
         }
     }
 }
