@@ -39,7 +39,7 @@ let spaceMissions: [SpaceMission] = [
                  missionCategory: "Manned"),
     
     SpaceMission(name: "Apollo 10", 
-                 year: 1966, 
+                 year: 1969, 
                  duration: 8,
                  numberOfCrew: 3,
                  imageName: "Apollo-10",

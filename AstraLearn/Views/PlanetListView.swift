@@ -12,7 +12,7 @@ struct PlanetListView: View {
     private let planets: [Planet] = [.mercury, .venus, .earth, .mars, .jupiter, .saturn, .uranus, .neptune, .pluto]
     
     let spaceBackground = LinearGradient(
-        gradient: Gradient(colors: [Color.blue.opacity(0.4), Color.purple.opacity(0.5), Color.black.opacity(0.7)]),
+        gradient: Gradient(colors: [Color.blue.opacity(0.2), Color.purple.opacity(0.2)]),
         startPoint: .topLeading,
         endPoint: .bottomTrailing
     )
@@ -26,7 +26,7 @@ struct PlanetListView: View {
                     
                     // main content layer
                     ScrollView {
-                        VStack(spacing: 8) {
+                        VStack(spacing: 16) {
                             ForEach(planets, id: \.self) { planet in
                                 NavigationLink(destination: PlanetDetailView(selectedPlanet: planet)) {
                                     PlanetCardView(planet: planet)

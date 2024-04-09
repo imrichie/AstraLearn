@@ -28,13 +28,23 @@ struct SpaceMissionCardView: View {
                     .foregroundStyle(Color.secondary)
                     .lineLimit(3)
                 
-                Text(mission.missionCategory)
-                    .font(.caption)
-                    .fontWeight(.bold)
-                    .foregroundStyle(Color.white)
-                    .padding(5)
-                    .background(Color.blue)
+                HStack {
+                    Text(mission.missionCategory)
+                        .font(.caption)
+                        .fontWeight(.bold)
+                        .foregroundStyle(Color.white)
+                        .padding(5)
+                        .background(Color.blue)
                     .clipShape(RoundedRectangle(cornerRadius: 5))
+                    
+                    Text(String(mission.year))
+                        .font(.caption)
+                        .fontWeight(.bold)
+                        .foregroundStyle(Color.white)
+                        .padding(5)
+                        .background(Color.indigo)
+                    .clipShape(RoundedRectangle(cornerRadius: 5))
+                }
             }
             Spacer()
         }

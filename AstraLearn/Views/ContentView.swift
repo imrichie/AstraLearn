@@ -35,7 +35,7 @@ struct ContentView: View {
         NavigationStack {
             ZStack {
                 // Background
-                spaceBackground
+                spaceGradient
                     .ignoresSafeArea()
                 
                 // Main Content Layer
