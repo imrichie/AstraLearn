@@ -43,7 +43,6 @@ struct PlanetCardView: View {
         .frame(width: 350, height: 116, alignment: .center)
         .background(.ultraThinMaterial)
         .clipShape(RoundedRectangle(cornerRadius: 16))
-        .shadow(color: .gray.opacity(0.5), radius: 2, x: 0, y: 2)
         .padding(.horizontal)
     }
 }

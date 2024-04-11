@@ -16,7 +16,6 @@ struct SpaceMissionCardView: View {
                 .resizable()
                 .frame(width: 100, height: 100)
                 .clipShape(RoundedRectangle(cornerRadius: 10))
-                .shadow(color: .blue, radius: 3)
             
             VStack(alignment: .leading, spacing: 8) {
                 Text(mission.name)
@@ -35,7 +34,7 @@ struct SpaceMissionCardView: View {
                         .foregroundStyle(Color.white)
                         .padding(5)
                         .background(Color.blue)
-                    .clipShape(RoundedRectangle(cornerRadius: 5))
+                        .clipShape(RoundedRectangle(cornerRadius: 5))
                     
                     Text(String(mission.year))
                         .font(.caption)
@@ -43,15 +42,14 @@ struct SpaceMissionCardView: View {
                         .foregroundStyle(Color.white)
                         .padding(5)
                         .background(Color.indigo)
-                    .clipShape(RoundedRectangle(cornerRadius: 5))
+                        .clipShape(RoundedRectangle(cornerRadius: 5))
                 }
             }
             Spacer()
         }
         .padding()
         .background(RoundedRectangle(cornerRadius: 15)
-            .fill(Color(UIColor.systemBackground)))
-        .shadow(color: .gray, radius: 2, x: 0, y: 2)
+            .fill(.ultraThinMaterial))
         .padding(.horizontal)
     }
 }

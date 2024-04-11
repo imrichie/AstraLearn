@@ -20,9 +20,6 @@ struct PlanetListView: View {
     var body: some View {
             NavigationStack {
                 ZStack {
-                    // background layer
-                    spaceBackground
-                        .ignoresSafeArea()
                     
                     // main content layer
                     ScrollView {

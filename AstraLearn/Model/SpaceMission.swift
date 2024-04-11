@@ -28,7 +28,7 @@ struct SpaceMission: Identifiable {
 
 // data model
 let spaceMissions: [SpaceMission] = [
-    SpaceMission(name: "GT-9 Gemini 9A", 
+    SpaceMission(name: "Gemini 9A", 
                  year: 1966, 
                  duration: 3,
                  numberOfCrew: 2,
@@ -99,7 +99,8 @@ let spaceMissions: [SpaceMission] = [
                  missionCategory: "Manned"),
     
     SpaceMission(name: "STS 31", 
-                 year: 1990, duration: 5,
+                 year: 1990, 
+                 duration: 5,
                  numberOfCrew: 5,
                  imageName: "STS-31",
                  fourthMetricDescription: "Deployed Statellites",
@@ -108,7 +109,8 @@ let spaceMissions: [SpaceMission] = [
                  missionCategory: "Research"),
     
     SpaceMission(name: "SpaceX Demo-2", 
-                 year: 2020, duration: 64, 
+                 year: 2020, 
+                 duration: 64, 
                  numberOfCrew: 2,
                  imageName: "Demo-2",
                  fourthMetricDescription: "Commercial Flight",
