@@ -28,8 +28,8 @@ struct SpaceMission: Identifiable {
 
 // data model
 let spaceMissions: [SpaceMission] = [
-    SpaceMission(name: "Gemini 9A", 
-                 year: 1966, 
+    SpaceMission(name: "Gemini 9A",
+                 year: 1966,
                  duration: 3,
                  numberOfCrew: 2,
                  imageName: "GT-9",
@@ -38,18 +38,18 @@ let spaceMissions: [SpaceMission] = [
                  missionDescription: "Featured two rendezvous with an augmented target docking adapter and included an extravehicular activity",
                  missionCategory: "Manned"),
     
-    SpaceMission(name: "Apollo 10", 
-                 year: 1969, 
+    SpaceMission(name: "Apollo 10",
+                 year: 1969,
                  duration: 8,
                  numberOfCrew: 3,
                  imageName: "Apollo-10",
-                 fourthMetricDescription: "Speed", 
-                 fourthMetric: 24791,
+                 fourthMetricDescription: "Lunar Orbits",
+                 fourthMetric: 31,
                  missionDescription: "Served as a full rehearsal for the Apollo 11 moon landing, including all phases except the actual lunar landing",
                  missionCategory: "Lunar"),
     
-    SpaceMission(name: "Apollo 11", 
-                 year: 1969, 
+    SpaceMission(name: "Apollo 11",
+                 year: 1969,
                  duration: 8,
                  numberOfCrew: 3,
                  imageName: "Apollo-11",
@@ -58,7 +58,7 @@ let spaceMissions: [SpaceMission] = [
                  missionDescription: "Successfully conducted the first manned moon landing, marking a significant milestone in human space exploration",
                  missionCategory: "Lunar"),
     
-    SpaceMission(name: "Apollo 13", 
+    SpaceMission(name: "Apollo 13",
                  year: 1970,
                  duration: 5, 
                  numberOfCrew: 3,
@@ -68,8 +68,8 @@ let spaceMissions: [SpaceMission] = [
                  missionDescription: "'Successful failure' that safely returned the crew after an onboard explosion in space",
                  missionCategory: "Lunar"),
     
-    SpaceMission(name: "STS 1", 
-                 year: 1981, 
+    SpaceMission(name: "STS-1",
+                 year: 1981,
                  duration: 2,
                  numberOfCrew: 2,
                  imageName: "STS-1",
@@ -78,7 +78,7 @@ let spaceMissions: [SpaceMission] = [
                  missionDescription: "The inaugural flight of NASA's Space Shuttle program, testing the capabilities of the shuttle as a reusable spacecraft for the first time.",
                  missionCategory: "Manned"),
     
-    SpaceMission(name: "STS 7",
+    SpaceMission(name: "STS-7",
                  year: 1983,
                  duration: 6,
                  numberOfCrew: 5,
@@ -88,7 +88,7 @@ let spaceMissions: [SpaceMission] = [
                  missionDescription: "Conducted scientific experiments in space and deployed several satellites; notable for having the first American woman, Sally Ride, in space",
                  missionCategory: "Manned"),
     
-    SpaceMission(name: "STS 28", 
+    SpaceMission(name: "STS-28",
                  year: 1988,
                  duration: 5,
                  numberOfCrew: 5,
@@ -98,8 +98,8 @@ let spaceMissions: [SpaceMission] = [
                  missionDescription: "Classified mission that deployed a payload for the Department of Defense, showcasing the shuttle's versatility in supporting national security",
                  missionCategory: "Manned"),
     
-    SpaceMission(name: "STS 31", 
-                 year: 1990, 
+    SpaceMission(name: "STS-31",
+                 year: 1990,
                  duration: 5,
                  numberOfCrew: 5,
                  imageName: "STS-31",
@@ -108,7 +108,7 @@ let spaceMissions: [SpaceMission] = [
                  missionDescription: "Deployed the Hubble Space Telescope into orbit, providing humanity with an unprecedented window into the universe",
                  missionCategory: "Research"),
     
-    SpaceMission(name: "SpaceX Demo-2", 
+    SpaceMission(name: "Demo-2", 
                  year: 2020, 
                  duration: 64, 
                  numberOfCrew: 2,

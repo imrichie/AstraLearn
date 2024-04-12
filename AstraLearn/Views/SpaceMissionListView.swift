@@ -15,7 +15,7 @@ struct SpaceMissionListView: View {
             ZStack {
               // TODO: background layer
                 ScrollView {
-                    VStack(spacing: 16) {
+                    VStack(spacing: 12) {
                         ForEach(missions) { mission in
                             NavigationLink(destination: SpaceMissionDetailView(selectedMission: mission)) {
                                 SpaceMissionCardView(mission: mission)

@@ -23,7 +23,7 @@ struct PlanetListView: View {
                     
                     // main content layer
                     ScrollView {
-                        VStack(spacing: 16) {
+                        VStack(spacing: 12) {
                             ForEach(planets, id: \.self) { planet in
                                 NavigationLink(destination: PlanetDetailView(selectedPlanet: planet)) {
                                     PlanetCardView(planet: planet)
