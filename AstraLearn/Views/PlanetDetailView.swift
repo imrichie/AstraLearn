@@ -23,7 +23,6 @@ struct PlanetDetailView: View {
                     .frame(height: 40)
                     .mask(Text(selectedPlanet.details.name.uppercased())
                         .font(.system(size: 44, weight: .bold)))
-                    .shadow(color: .blue, radius: 10, x: 0, y: 2)
                     .kerning(8)
                     .padding(.bottom, 36)
                 

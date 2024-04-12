@@ -35,7 +35,7 @@ struct ContentView: View {
         NavigationStack {
             ZStack {
                 // Background
-                spaceBackground
+                spaceGradient
                     .ignoresSafeArea()
                 
                 // Main Content Layer
@@ -45,33 +45,31 @@ struct ContentView: View {
                         .aspectRatio(contentMode: .fit)
                         .padding(.bottom, 36)
                     
-                    Button {
-                        selectedCategory = "Planets"
-                    } label: {
-                        NavigationLink(destination: PlanetListView()) {
-                            Text("Planets")
-                                .font(.headline)
-                                .foregroundStyle(.white)
-                                .padding()
-                                .frame(width: 200, height: 50)
-                                .background(Color.blue)
-                                .clipShape(RoundedRectangle(cornerRadius: 16))
-                                .shadow(color: .gray, radius: 5, x: 0, y: 5)
+                    VStack(spacing: 16) {
+                        Button {
+                            selectedCategory = "Planets"
+                        } label: {
+                            NavigationLink(destination: PlanetListView()) {
+                                Text("Planets")
+                                    .font(.headline)
+                                    .foregroundStyle(.white)
+                                    .frame(width: 300, height: 50)
+                                    .background(Color.blue)
+                                    .clipShape(RoundedRectangle(cornerRadius: 16))
+                            }
                         }
-                    }
-                    
-                    Button {
-                        selectedCategory = "Space Missions"
-                    } label: {
-                        NavigationLink(destination: PlanetListView()) {
-                            Text("Space Missions")
-                                .font(.headline)
-                                .foregroundStyle(.white)
-                                .padding()
-                                .frame(width: 200, height: 50)
-                                .background(Color.purple)
-                                .clipShape(RoundedRectangle(cornerRadius: 16))
-                                .shadow(color: .gray, radius: 5, x: 0, y: 5)
+                        
+                        Button {
+                            selectedCategory = "Space Missions"
+                        } label: {
+                            NavigationLink(destination: SpaceMissionListView()) {
+                                Text("Space Missions")
+                                    .font(.headline)
+                                    .foregroundStyle(.white)
+                                    .frame(width: 300, height: 50)
+                                    .background(Color.purple)
+                                    .clipShape(RoundedRectangle(cornerRadius: 16))
+                            }
                         }
                     }
                 }
