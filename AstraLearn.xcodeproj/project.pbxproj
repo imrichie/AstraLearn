@@ -19,6 +19,7 @@
 		136B27AB2BB92F0600A389BB /* PlanetCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136B27AA2BB92F0600A389BB /* PlanetCardView.swift */; };
 		13D053CD2BBFC439007679F7 /* SpaceMissionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D053CC2BBFC439007679F7 /* SpaceMissionListView.swift */; };
 		13D480482BC7893D002DE8C5 /* SpaceMissionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D480472BC7893D002DE8C5 /* SpaceMissionDetailView.swift */; };
+		13F507F72BC9C7ED003CB289 /* MissionDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F507F62BC9C7ED003CB289 /* MissionDescriptionView.swift */; };
 		13F85EC22BB62A49002D29D5 /* PlanetListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13F85EC12BB62A49002D29D5 /* PlanetListView.swift */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,7 @@
 		136B27AA2BB92F0600A389BB /* PlanetCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetCardView.swift; sourceTree = "<group>"; };
 		13D053CC2BBFC439007679F7 /* SpaceMissionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceMissionListView.swift; sourceTree = "<group>"; };
 		13D480472BC7893D002DE8C5 /* SpaceMissionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceMissionDetailView.swift; sourceTree = "<group>"; };
+		13F507F62BC9C7ED003CB289 /* MissionDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionDescriptionView.swift; sourceTree = "<group>"; };
 		13F85EC12BB62A49002D29D5 /* PlanetListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,6 +99,7 @@
 				13D053CC2BBFC439007679F7 /* SpaceMissionListView.swift */,
 				132DBEA62BC3BEBE00030D2F /* SpaceMissionCardView.swift */,
 				13D480472BC7893D002DE8C5 /* SpaceMissionDetailView.swift */,
+				13F507F62BC9C7ED003CB289 /* MissionDescriptionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13F507F72BC9C7ED003CB289 /* MissionDescriptionView.swift in Sources */,
 				132DBEA72BC3BEBE00030D2F /* SpaceMissionCardView.swift in Sources */,
 				13F85EC22BB62A49002D29D5 /* PlanetListView.swift in Sources */,
 				1365E9ED2BB4F2950079BF92 /* ContentView.swift in Sources */,
