@@ -66,24 +66,25 @@ struct MissionDescriptionView: View {
                         }
                     }
                     
-                    Spacer()
-                    
-                    Button(action: {
-                        isPresented = false 
-                    }, label: {
-                        Text("Close")
-                            .font(.headline)
-                            .foregroundStyle(Color.blue)
-                            .padding()
-                            .frame(maxWidth: .infinity)
-                            .background(RoundedRectangle(cornerRadius: 12)
-                                .fill(Color.gray.opacity(0.2))
-                            )
-                            .padding(.horizontal)
-                    })
                 }
                 .padding()
             }
+            Spacer()
+            
+            Button(action: {
+                isPresented = false
+            }, label: {
+                Text("Close")
+                    .font(.headline)
+                    .foregroundStyle(Color.blue)
+                    .padding()
+                    .frame(maxWidth: .infinity)
+                    .background(RoundedRectangle(cornerRadius: 12)
+                        .fill(Color.gray.opacity(0.2))
+                    )
+                    .padding(.horizontal)
+            })
+            .padding(.bottom)
             .navigationTitle(Text("🚀 \(selectedMission.name)"))
             .navigationBarTitleDisplayMode(.large)
         }
