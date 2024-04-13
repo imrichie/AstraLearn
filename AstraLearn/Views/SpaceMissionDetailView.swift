@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SpaceMissionDetailView: View {
+    @State private var showDescriptionSheet: Bool = false
     let selectedMission: SpaceMission
     
     var body: some View {
@@ -16,7 +17,7 @@ struct SpaceMissionDetailView: View {
             Color.black
                 .ignoresSafeArea()
             
-            VStack() {
+            VStack(spacing: 36) {
                 Rectangle()
                     .fill(LinearGradient(gradient: Gradient(colors: [.blue, .purple]), startPoint: .leading, endPoint: .trailing))
                     .frame(height: 40)
@@ -24,13 +25,17 @@ struct SpaceMissionDetailView: View {
                         .font(.system(size: 44, weight: .bold))
                         .kerning(8)
                         .minimumScaleFactor(0.8))
-                    .padding(.bottom, 36)
                 
                 Image(selectedMission.imageName)
                     .resizable()
                     .scaledToFit()
                     .shadow(color: .blue, radius: 3)
-                    .padding(.bottom, 36)
+                    .onTapGesture {
+                        showDescriptionSheet = true
+                    }
+                    .sheet(isPresented: $showDescriptionSheet, content: {
+                        MissionDescriptionView(selectedMission: selectedMission, isPresented: $showDescriptionSheet)
+                    })
                 
                 // metric cards
                 VStack(spacing: 16) {
@@ -45,11 +50,10 @@ struct SpaceMissionDetailView: View {
                     }
                 }
             }
-            .padding()
         }
     }
 }
 
 #Preview {
-    SpaceMissionDetailView(selectedMission: spaceMissions.last!)
+    SpaceMissionDetailView(selectedMission: spaceMissions[4])
 }

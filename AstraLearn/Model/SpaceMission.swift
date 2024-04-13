@@ -18,6 +18,7 @@ struct SpaceMission: Identifiable {
     let fourthMetric: Int
     let missionDescription: String
     let missionCategory: String
+    let crewNames: [String]
     
     // computed property for duration string
     var durationFormatted: String {
@@ -35,8 +36,13 @@ let spaceMissions: [SpaceMission] = [
                  imageName: "GT-9",
                  fourthMetricDescription: "Number of EVAs", 
                  fourthMetric: 1,
-                 missionDescription: "Featured two rendezvous with an augmented target docking adapter and included an extravehicular activity",
-                 missionCategory: "Manned"),
+                 missionDescription: """
+                 Gemini 9A, launched on June 3, 1966, aimed to test rendezvous and docking techniques and conduct two extra-vehicular activities (EVAs). The mission faced initial challenges when the original docking target vehicle failed to achieve orbit.
+                 
+                 Despite a failed docking attempt due to a protective shroud not fully detaching, astronaut Gene Cernan performed a two-hour EVA, demonstrating the difficulty of maneuvering outside the spacecraft. The mission provided crucial data that helped shape future EVA suits and procedures.
+                 """,
+                 missionCategory: "Manned",
+                 crewNames: ["Thomas Stafford", "Eugene Cernan"]),
     
     SpaceMission(name: "Apollo 10",
                  year: 1969,
@@ -45,8 +51,13 @@ let spaceMissions: [SpaceMission] = [
                  imageName: "Apollo-10",
                  fourthMetricDescription: "Lunar Orbits",
                  fourthMetric: 31,
-                 missionDescription: "Served as a full rehearsal for the Apollo 11 moon landing, including all phases except the actual lunar landing",
-                 missionCategory: "Lunar"),
+                 missionDescription: """
+                 Apollo 10 served as the final "dress rehearsal" for the moon landing, launched on May 18, 1969. It was designed to test all procedures and components before the actual Moon landing without making the final descent.
+                 
+                 The crew took the Lunar Module to within 8.4 nautical miles of the lunar surface, testing its systems in lunar orbit. This mission confirmed the performance of the Lunar Module and set the stage for the historic Apollo 11 landing.
+                """,
+                 missionCategory: "Lunar",
+                 crewNames: ["Thomas Stafford", "John Young", "Eugene Cernan"]),
     
     SpaceMission(name: "Apollo 11",
                  year: 1969,
@@ -55,8 +66,13 @@ let spaceMissions: [SpaceMission] = [
                  imageName: "Apollo-11",
                  fourthMetricDescription: "Moonwalks", 
                  fourthMetric: 1,
-                 missionDescription: "Successfully conducted the first manned moon landing, marking a significant milestone in human space exploration",
-                 missionCategory: "Lunar"),
+                 missionDescription: """
+                 Launched on July 16, 1969, Apollo 11 was the historic mission that first landed humans on the Moon and safely returned them to Earth, fulfilling President Kennedy's national goal.
+
+                 Neil Armstrong and Buzz Aldrin spent 21 hours on the lunar surface, collecting samples and deploying scientific experiments. Their successful return marked a major triumph in human space exploration.
+                 """,
+                 missionCategory: "Lunar",
+                 crewNames: ["Neil Armstrong", "Buzz Aldrin", "Michael Collins"]),
     
     SpaceMission(name: "Apollo 13",
                  year: 1970,
@@ -65,8 +81,13 @@ let spaceMissions: [SpaceMission] = [
                  imageName: "Apollo-13",
                  fourthMetricDescription: "Modules Docked", 
                  fourthMetric: 0,
-                 missionDescription: "'Successful failure' that safely returned the crew after an onboard explosion in space",
-                 missionCategory: "Lunar"),
+                 missionDescription: """
+                 Famously launched on April 11, 1970, with the goal of landing at Fra Mauro on the Moon. However, the mission was abruptly altered by an oxygen tank explosion two days into the flight.
+                 
+                 The crew, along with mission control, ingeniously modified the Lunar Module into a 'lifeboat' to survive the journey around the Moon and back to Earth. This mission is now celebrated as a "successful failure" due to the safe return of its crew.
+                 """,
+                 missionCategory: "Lunar",
+                 crewNames: ["James Lovell", "John Swigert", "Fred Haise"]),
     
     SpaceMission(name: "STS-1",
                  year: 1981,
@@ -75,8 +96,13 @@ let spaceMissions: [SpaceMission] = [
                  imageName: "STS-1",
                  fourthMetricDescription: "Orbits around Earth", 
                  fourthMetric: 36,
-                 missionDescription: "The inaugural flight of NASA's Space Shuttle program, testing the capabilities of the shuttle as a reusable spacecraft for the first time.",
-                 missionCategory: "Manned"),
+                 missionDescription:"""
+                STS-1, the first orbital flight of NASA's Space Shuttle program, launched on April 12, 1981. It marked the first time a new spacecraft was tested with a crew aboard.
+
+                Commanded by John Young and piloted by Robert Crippen, the mission lasted 54 hours and orbited the Earth 36 times, testing all systems and marking a new era of reusable spacecraft.
+                """,
+                 missionCategory: "Manned",
+                 crewNames: ["John Young", "Robert Crippen"]),
     
     SpaceMission(name: "STS-7",
                  year: 1983,
@@ -85,8 +111,13 @@ let spaceMissions: [SpaceMission] = [
                  imageName: "STS-7",
                  fourthMetricDescription: "Satellites Deployed",
                  fourthMetric: 2,
-                 missionDescription: "Conducted scientific experiments in space and deployed several satellites; notable for having the first American woman, Sally Ride, in space",
-                 missionCategory: "Manned"),
+                 missionDescription: """
+                 STS-7, launched on June 18, 1983, was Challenger’s second flight but notable for carrying Sally Ride, who became the first American woman in space.
+                 
+                 The mission deployed several satellites and tested the Canadian-built robotic arm in orbit, showcasing the versatility of Shuttle missions in deploying and interacting with payloads in space.
+                 """,
+                 missionCategory: "Manned",
+                 crewNames: ["Robert Crippen", "Frederick Hauck", "John Fabian", "Sally Ride", "Norman Thagard"]),
     
     SpaceMission(name: "STS-28",
                  year: 1988,
@@ -95,8 +126,13 @@ let spaceMissions: [SpaceMission] = [
                  imageName: "STS-28",
                  fourthMetricDescription: "Classifed Payloads",
                  fourthMetric: 1,
-                 missionDescription: "Classified mission that deployed a payload for the Department of Defense, showcasing the shuttle's versatility in supporting national security",
-                 missionCategory: "Manned"),
+                 missionDescription: """
+                 Launched on August 8, 1989, STS-28 was a dedicated Department of Defense mission, shrouded in secrecy, which often characterizes DoD missions aboard the Shuttle.
+                 
+                 Although most details remain classified, the mission is known to have deployed a payload and performed significant in-orbit operations, contributing to national security.
+                 """,
+                 missionCategory: "Manned",
+                 crewNames: ["Brewster Shaw", "Richard Richards", "David Leestma", "James Adamson", "Mark Brown"]),
     
     SpaceMission(name: "STS-31",
                  year: 1990,
@@ -105,8 +141,13 @@ let spaceMissions: [SpaceMission] = [
                  imageName: "STS-31",
                  fourthMetricDescription: "Deployed Statellites",
                  fourthMetric: 1,
-                 missionDescription: "Deployed the Hubble Space Telescope into orbit, providing humanity with an unprecedented window into the universe",
-                 missionCategory: "Research"),
+                 missionDescription: """
+                 STS-31, launched on April 24, 1990, is famous for deploying the Hubble Space Telescope into orbit, revolutionizing many fields of astrophysics.
+                 
+                 Beyond deploying Hubble, the mission's success set the stage for numerous servicing missions, ensuring Hubble’s contributions to astronomy for decades.
+                 """,
+                 missionCategory: "Research",
+                 crewNames: ["Loren Shriver", "Charles Bolden", "Steven Hawley", "Bruce McCandless", "Kathryn Sullivan"]),
     
     SpaceMission(name: "Demo-2", 
                  year: 2020, 
@@ -115,16 +156,26 @@ let spaceMissions: [SpaceMission] = [
                  imageName: "Demo-2",
                  fourthMetricDescription: "Commercial Flight",
                  fourthMetric: 1,
-                 missionDescription: "Marked the first crewed flight test of SpaceX's Crew Dragon spacecraft, symbolizing the dawn of commercial crewed spaceflight.",
-                 missionCategory: "Commercial"),
+                 missionDescription: """
+                 Launched on May 30, 2020, SpaceX Demo-2 was the first crewed flight of the Crew Dragon spacecraft, testing the vessel’s end-to-end capabilities.
+                 
+                 Astronauts Bob Behnken and Doug Hurley successfully docked with the International Space Station, marking a new era of commercial crew spaceflights in partnership with NASA.
+                 """,
+                 missionCategory: "Commercial",
+                 crewNames: ["Robert Behnken", "Douglas Hurley"]),
     
     SpaceMission(name: "Expedition 66",
                  year: 2021,
                  duration: 180,
-                 numberOfCrew: 6,
+                 numberOfCrew: 5,
                  imageName: "Expedition-66",
                  fourthMetricDescription: "Spacewalks",
                  fourthMetric: 4,
-                 missionDescription: "Mission to the International Space Station focused on scientific research across multiple disciplines to benefit humanity",
-                 missionCategory: "Research")
+                 missionDescription: """
+                 Launched on May 30, 2020, SpaceX Demo-2 was the first crewed flight of the Crew Dragon spacecraft, testing the vessel’s end-to-end capabilities.
+
+                 Astronauts Bob Behnken and Doug Hurley successfully docked with the International Space Station, marking a new era of commercial crew spaceflights in partnership with NASA.
+                 """,
+                 missionCategory: "Research",
+                 crewNames: ["Thomas Pesquet", "Megan McArthur", "Shane Kimbrough", "Akihito Hoshide", "Mark Vande-Hei"])
 ]
