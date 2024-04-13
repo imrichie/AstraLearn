@@ -9,6 +9,8 @@ import SwiftUI
 
 struct SpaceMissionDetailView: View {
     @State private var showDescriptionSheet: Bool = false
+    @State private var animateSpaceMissionBadge: Bool = false
+    
     let selectedMission: SpaceMission
     
     var body: some View {
@@ -29,7 +31,14 @@ struct SpaceMissionDetailView: View {
                 Image(selectedMission.imageName)
                     .resizable()
                     .scaledToFit()
-                    .shadow(color: .blue, radius: 3)
+                    .shadow(color: .yellow, radius: 3)
+                    .scaleEffect(animateSpaceMissionBadge ? 1.05 : 1.0)
+                    .animation(.easeInOut(duration: 0.9).repeatCount(3), value: animateSpaceMissionBadge)
+                    .onAppear {
+                        DispatchQueue.main.async {
+                            self.animateSpaceMissionBadge = true
+                        }
+                    }
                     .onTapGesture {
                         showDescriptionSheet = true
                     }
