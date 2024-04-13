@@ -33,9 +33,10 @@ struct MissionDescriptionView: View {
                             .clipShape(RoundedRectangle(cornerRadius: 5))
                     }
                     
-                    Text("Mission Details")
+                    Text("🛰️ Mission Details")
                         .font(.title)
                         .fontWeight(.bold)
+                        .lineLimit(2)
                         .padding(.top)
                     
                     Text(selectedMission.missionDescription)
@@ -43,13 +44,30 @@ struct MissionDescriptionView: View {
                         .foregroundStyle(.secondary)
                         .padding(.horizontal)
                     
-                    Text("Crew Members")
+                    Text("👨🏻‍🚀 Crew Members")
                         .font(.title2)
                         .fontWeight(.bold)
                         .padding(.top)
                     
+                    let columns = [
+                        GridItem(.flexible(), alignment: .leading),
+                        GridItem(.flexible(), alignment: .leading)
+                    ]
+                    
+                    LazyVGrid(columns: columns, spacing: 8) {
+                        ForEach(selectedMission.crewNames.indices, id: \.self) { member in
+                            Text(selectedMission.crewNames[member])
+                                .font(.body)
+                                .fontWeight(.medium)
+                                .frame(width: 165, height: 44)
+                                .foregroundStyle(.white)
+                                .background(Color.blue)
+                                .clipShape(RoundedRectangle(cornerRadius: 8))
+                        }
+                    }
+                    
                     Spacer()
-                    Spacer()
+                    
                     Button(action: {
                         isPresented = false 
                     }, label: {
@@ -66,12 +84,12 @@ struct MissionDescriptionView: View {
                 }
                 .padding()
             }
-            .navigationTitle(Text(selectedMission.name))
+            .navigationTitle(Text("🚀 \(selectedMission.name)"))
             .navigationBarTitleDisplayMode(.large)
         }
     }
 }
 
 #Preview {
-    MissionDescriptionView(selectedMission: spaceMissions[3], isPresented: .constant(false))
+    MissionDescriptionView(selectedMission: spaceMissions[4], isPresented: .constant(false))
 }
