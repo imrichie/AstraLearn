@@ -1,6 +1,6 @@
 # Astra Learn
 
-Astra Learn is a n iOS application designed to educate users about planets and notable NASA space missions. Built using SwiftUI and Swift 5.x, targeting iOS 17+, the app offers a user-friendly interface that navigates through a custom space-themed gradient hompage to detailed information about each planet and space mission. 
+Astra Learn is an iOS application designed to educate users about planets and notable NASA space missions. Built using SwiftUI and Swift 5.x, targeting iOS 17+, the app offers a user-friendly interface that navigates through a custom space-themed gradient hompage to detailed information about each planet and space mission. 
 
 ### Features 
 - **Planets View** Displays a list of all planets, from Mercury to Pluto, with an option to view detailed information about each planet. 
