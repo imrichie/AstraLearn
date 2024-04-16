@@ -22,6 +22,16 @@ Astra Learn is an iOS application designed to educate users about planets and no
 git clone https://github.com/imrichie/astralearn.git
 ```
 2. **Open the project in Xcode:**
-- Navigate to the cloned directory and open `AstraLearn.xcodeproj`.
+   - Navigate to the cloned directory and open `AstraLearn.xcodeproj`.
 3. **Run the project:**
-- Select a target device or simulator and press Run.
+   - Select a target device or simulator and press Run.
+
+### Screenshots
+Main View | Planet List | Planet Detail
+:-: | :-: | :-: 
+| ![Main View](/Assets/1-Main%20Screen.png) | ![Planet List](/Assets/2-Planet%20List.png) | ![Planet Detail](/Assets/3-Planet%20Detail.png) |
+
+
+| Mission List | Mission Detail | Mission Description |
+| :-: | :-: | :-: |
+| ![Mission List](/Assets/4-Mission%20List.png) | ![Mission Detail](/Assets/5-Mission%20Detail.png) | ![Mission Description](/Assets/6-Mission%20Description.png)
