@@ -12,51 +12,45 @@ struct PlanetDetailView: View {
     
     var body: some View {
         ZStack {
-            // background
+            // Background
             Color.black
                 .ignoresSafeArea()
             
-            // main content layer
-            VStack {
+            // Main content layer
+            VStack(spacing: 36) {
                 Rectangle()
                     .fill(LinearGradient(gradient: Gradient(colors: [.blue, .purple]), startPoint: .leading, endPoint: .trailing))
                     .frame(height: 40)
                     .mask(Text(selectedPlanet.details.name.uppercased())
-                        .font(.system(size: 44, weight: .bold)))
-                    .kerning(8)
-                    .padding(.bottom, 36)
+                        .font(.system(size: 44, weight: .bold))
+                        .kerning(8))
                 
                 // Planet image
                 Image(selectedPlanet.details.imageName)
                     .resizable()
                     .scaledToFit()
                     .shadow(color: .blue, radius: 10, x: 0, y: 0)
-                    .padding(.bottom, 16)
                 
-                // metric cards
+                // Metric cards
                 VStack(spacing: 16) {
                     HStack(spacing: 16) {
-                        // Moon Card
                         MetricCardView(title: "Number of Moons",
-                                   metric: "\(selectedPlanet.details.numberOfMoons)",
-                                   description: "Orbiting")
+                                       metric: "\(selectedPlanet.details.numberOfMoons)",
+                                       description: "Orbiting")
                         
-                        // Orbit Period Card
                         MetricCardView(title: "Orbit Period",
-                                   metric: "\(selectedPlanet.details.formattedOrbitPeriod.value)",
-                                   description: selectedPlanet.details.formattedOrbitPeriod.unit)
+                                       metric: "\(selectedPlanet.details.formattedOrbitPeriod.value)",
+                                       description: selectedPlanet.details.formattedOrbitPeriod.unit)
                     }
                     
                     HStack(spacing: 16) {
-                        // Diameter Card
                         MetricCardView(title: "Diameter",
-                                   metric: selectedPlanet.details.formattedDiameter,
-                                   description: "Kilometers")
+                                       metric: selectedPlanet.details.formattedDiameter,
+                                       description: "Kilometers")
                         
-                        // Surface Temperature Card
                         MetricCardView(title: "Surface Temperature",
-                                   metric: selectedPlanet.details.formattedTemperature,
-                                   description: "Average")
+                                       metric: selectedPlanet.details.formattedTemperature,
+                                       description: "Average")
                     }
                 }
             }

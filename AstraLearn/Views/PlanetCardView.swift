@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct PlanetCardView: View {
-    // accept a planet enum case
     let planet: Planet
     
     var body: some View {
@@ -18,8 +17,7 @@ struct PlanetCardView: View {
                 .resizable()
                 .frame(width: 100, height: 100)
                 .clipShape(Circle())
-                .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
-                .padding(.leading, 16)
+                .shadow(radius: 10)
             
             // Planet Name and Description
             VStack(alignment: .leading, spacing: 4) {
@@ -37,16 +35,14 @@ struct PlanetCardView: View {
             Text("\(planet.details.orbitNumber)")
                 .font(.system(size: 64))
                 .fontWeight(.bold)
-                .padding(.trailing, 16)
-            
         }
-        .frame(width: 350, height: 116, alignment: .center)
+        .padding()
+        .frame(height: 116)
         .background(.ultraThinMaterial)
         .clipShape(RoundedRectangle(cornerRadius: 16))
         .padding(.horizontal)
     }
 }
-
 #Preview {
     PlanetCardView(planet: .earth)
 }

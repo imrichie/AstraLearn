@@ -12,21 +12,18 @@ struct SpaceMissionListView: View {
     
     var body: some View {
         NavigationStack {
-            ZStack {
-              // TODO: background layer
-                ScrollView {
-                    VStack(spacing: 12) {
-                        ForEach(missions) { mission in
-                            NavigationLink(destination: SpaceMissionDetailView(selectedMission: mission)) {
-                                SpaceMissionCardView(mission: mission)
-                            }
-                            .buttonStyle(.plain)
+            ScrollView {
+                VStack(spacing: 12) {
+                    ForEach(missions) { mission in
+                        NavigationLink(destination: SpaceMissionDetailView(selectedMission: mission)) {
+                            SpaceMissionCardView(mission: mission)
                         }
+                        .buttonStyle(.plain)
                     }
                 }
-                .navigationTitle("Space Missions")
-                .navigationBarTitleDisplayMode(.large)
             }
+            .navigationTitle("Space Missions")
+            .navigationBarTitleDisplayMode(.large)
         }
     }
 }
