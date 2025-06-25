@@ -11,7 +11,7 @@ struct SpaceMissionCardView: View {
     let mission: SpaceMission
     
     var body: some View {
-        HStack(alignment: .center, spacing: 8) {
+        HStack(spacing: 8) {
             Image(mission.imageName)
                 .resizable()
                 .frame(width: 100, height: 100)

@@ -15,7 +15,7 @@ struct SpaceMissionDetailView: View {
     
     var body: some View {
         ZStack {
-            // TODO: background layer
+            // Background layer
             Color.black
                 .ignoresSafeArea()
             
@@ -35,9 +35,7 @@ struct SpaceMissionDetailView: View {
                     .scaleEffect(animateSpaceMissionBadge ? 1.05 : 1.0)
                     .animation(.easeInOut(duration: 0.9).repeatCount(3), value: animateSpaceMissionBadge)
                     .onAppear {
-                        DispatchQueue.main.async {
-                            self.animateSpaceMissionBadge = true
-                        }
+                        animateSpaceMissionBadge = true
                     }
                     .onTapGesture {
                         showDescriptionSheet = true
@@ -46,7 +44,7 @@ struct SpaceMissionDetailView: View {
                         MissionDescriptionView(selectedMission: selectedMission, isPresented: $showDescriptionSheet)
                     })
                 
-                // metric cards
+                // Metric cards
                 VStack(spacing: 16) {
                     HStack(spacing: 16) {
                         MetricCardView(title: "Date of Mission", metric: String(selectedMission.year), description: "Launch Year")
